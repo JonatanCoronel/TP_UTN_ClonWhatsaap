@@ -22,8 +22,8 @@ export const contacts = [
     replies: [
       "Sabés Moni de esto?",
       "Hermosa mañana verdad?",
-      "Pedazo de boludooooo",
-      "¿Qué pasa cara de galleta redonda?"
+      "Pedazo de dolobuuu",
+      "¿Qué pasa cara de galletita redonda?"
     ]
   },
 
@@ -35,9 +35,9 @@ export const contacts = [
     messages: [
       { id: 201, text: "Holaaaaa corazón", sender: "them", time: "09:00" },
       { id: 202, text: "Hola Moni", sender: "me", time: "09:01", read: true },
-      { id: 203, text: "Ayudame Pepe, ¿tiene plata? ¿Sabés dónde?", sender: "them", time: "09:02" },
+      { id: 203, text: "Ayudame, ¿tiene plata? ¿Sabés dónde?", sender: "them", time: "09:02" },
       { id: 204, text: "No Moni, ni idea", sender: "me", time: "09:03", read: true },
-      { id: 205, text: "Dale pendejo vos sabés dónde", sender: "them", time: "09:04" }
+      { id: 205, text: "Dale chiquito decime donde esta", sender: "them", time: "09:04" }
     ],
     replies: [
       "Estoy divina",
@@ -76,7 +76,7 @@ export const contacts = [
       { id: 402, text: "Hola Pao", sender: "me", time: "12:36", read: true },
       { id: 403, text: "¿Querés venir a casa? Papucho no está", sender: "them", time: "12:37" },
       { id: 404, text: "No porque la última me golpeó, sabés dónde", sender: "me", time: "12:38", read: true },
-      { id: 405, text: "Dale, que estás fuerte y me gusta", sender: "them", time: "12:39" }
+      { id: 405, text: "Dale, no seas miedoso", sender: "them", time: "12:39" }
     ],
     replies: [
       "Hola lindo",
@@ -95,7 +95,7 @@ export const contacts = [
       { id: 502, text: "Todo bien Dardo", sender: "me", time: "17:21", read: true },
       { id: 503, text: "¿Viste a Pepe? Su perro se cagó en las margaritas!", sender: "them", time: "17:22" },
       { id: 504, text: "No ni idea, pero pobre Fatiga", sender: "me", time: "17:23", read: true },
-      { id: 505, text: "Lo veo lo mato!", sender: "them", time: "17:24" }
+      { id: 505, text: "Lo veo, lo mato!", sender: "them", time: "17:24" }
     ],
     replies: [
       "Hola Pepe",
@@ -113,7 +113,7 @@ export const contacts = [
     messages: [
       { id: 601, text: "Hola, ¿cómo estás?", sender: "them", time: "17:20" },
       { id: 602, text: "Todo bien, ¿y vos?", sender: "me", time: "17:21", read: true },
-      { id: 603, text: "¿Qué querés pendejo? Estoy trabajando", sender: "them", time: "17:22" },
+      { id: 603, text: "¿Qué querés nene? Estoy trabajando", sender: "them", time: "17:22" },
       { id: 604, text: "Solo quería saber dónde está Dardo", sender: "me", time: "17:23", read: true },
       { id: 605, text: "Debe estar gateando, seguro!!", sender: "them", time: "17:24" }
     ],
