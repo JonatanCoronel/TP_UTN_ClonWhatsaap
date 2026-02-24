@@ -34,7 +34,7 @@ function ChatWindow({ id, goBack }) {
     <div className="chat-window">
       <div className="chat-header">
         <button className="back-btn" onClick={goBack}>
-          <i class="bi bi-chevron-left"></i>
+          <i className="bi bi-chevron-left"></i>
         </button>
 
         <img src={contact.avatar} alt={contact.name} />
