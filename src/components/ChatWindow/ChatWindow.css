@@ -1,9 +1,9 @@
-
 .chat-window {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #0b141a;
+    overflow: hidden;
 }
 
 .chat-header {
@@ -51,34 +51,35 @@
     align-items: center;
     justify-content: center;
 }
+
 .chat-search {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 16px;
-  background-color: #111b21;
-  border-bottom: 1px solid #2a3942;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background-color: #111b21;
+    border-bottom: 1px solid #2a3942;
 }
 
 .chat-search input {
-  flex: 1;
-  padding: 6px 10px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  background-color: #202c33;
-  color: white;
-  font-size: 14px;
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #202c33;
+    color: white;
+    font-size: 14px;
 }
 
 .cancel-search {
-  color: white;
-  font-size: 18x;
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
+    color: white;
+    font-size: 18x;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
 }
 
 .cancel-search:hover {
-  text-decoration: none;
+    text-decoration: none;
 }

@@ -16,9 +16,11 @@ function MessageInput({ contactId }) {
     };
 
     const handleChange = (e) => {
-        setText(e.target.value);
-        e.target.style.height = "auto";
-        e.target.style.height = e.target.scrollHeight + "px";
+        const el = e.target;
+        setText(el.value);
+        el.style.height = "auto";
+        el.style.height = el.scrollHeight + "px";
+        el.scrollTop = el.scrollHeight;
     };
 
     return (

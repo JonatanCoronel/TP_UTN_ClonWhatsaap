@@ -62,7 +62,8 @@ export const contacts = [
     replies: [
       "Las minas me aman",
       "Tengo mas facha que papucho ",
-      "Soy el más ganador"
+      "Soy el más ganador",
+      "papuuchooo"
     ]
   },
 

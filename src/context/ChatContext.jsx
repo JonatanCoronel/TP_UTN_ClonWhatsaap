@@ -37,7 +37,7 @@ export function ChatProvider({ children }) {
           if (contact.id === contactId) {
             const randomReply =
               contact.replies[
-                Math.floor(Math.random() * contact.replies.length)
+              Math.floor(Math.random() * contact.replies.length)
               ];
 
             const newMessage = {

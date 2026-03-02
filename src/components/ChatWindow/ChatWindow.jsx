@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useChat } from "../../context/ChatContext";
 import "./ChatWindow.css";
 import Message from "../Message/Message";
@@ -6,7 +6,7 @@ import MessageInput from "../MessageInput/MessageInput";
 
 function ChatWindow({ id, goBack }) {
   const { contacts, resetUnread } = useChat();
-
+  const messagesEndRef = useRef(null);
   const [typing, setTyping] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -49,6 +49,13 @@ function ChatWindow({ id, goBack }) {
       window.removeEventListener("keydown", handleEsc);
     };
   }, [showSearch]);
+  
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end"
+    });
+  }, [contact?.messages.length]);
 
   const closeSearch = () => {
     setShowSearch(false);
@@ -105,6 +112,9 @@ function ChatWindow({ id, goBack }) {
             <i>Escribiendo...</i>
           </div>
         )}
+
+        {/* 🔥 ancla invisible */}
+        <div ref={messagesEndRef} />
       </div>
 
       <MessageInput contactId={id} />
