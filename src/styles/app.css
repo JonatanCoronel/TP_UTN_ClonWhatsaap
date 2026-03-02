@@ -82,6 +82,14 @@ body {
         padding: 8px 10px;
     }
 
+    .input-bubble {
+    display: flex;
+    align-items: center;
+    flex: 1;                /* ocupa todo el ancho disponible */
+    max-height: 40px;       /* limitar la altura */
+    border-radius: 30px;
+    padding: 8px 14px;
+}
     .input-bubble textarea {
         font-size: 13px;
     }
