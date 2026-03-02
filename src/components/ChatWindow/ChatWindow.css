@@ -4,7 +4,6 @@
     flex-direction: column;
     background-color: #0b141a;
     overflow: hidden;
-    height: 100dvh;
 }
 
 .chat-header {
