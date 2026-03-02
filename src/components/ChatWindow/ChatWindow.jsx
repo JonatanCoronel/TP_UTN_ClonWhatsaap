@@ -6,12 +6,15 @@ import MessageInput from "../MessageInput/MessageInput";
 
 function ChatWindow({ id, goBack }) {
   const { contacts, resetUnread } = useChat();
+
   const [typing, setTyping] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
   const contact = contacts.find(c => c.id === id);
 
   useEffect(() => {
-    if (contact) resetUnread(id);
+    resetUnread(id);
   }, [id]);
 
   useEffect(() => {
@@ -20,16 +23,43 @@ function ChatWindow({ id, goBack }) {
     const lastMessage =
       contact.messages[contact.messages.length - 1];
 
-    if (lastMessage?.sender === "me") {
-      setTyping(true);
-      const timer = setTimeout(() => {
-        setTyping(false);
-      }, 1500);
-      return () => clearTimeout(timer);
+    if (!lastMessage || lastMessage.sender !== "me") return;
+
+    setTyping(true);
+
+    const timer = setTimeout(() => {
+      setTyping(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [contact?.messages.length]);
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        closeSearch();
+      }
+    };
+
+    if (showSearch) {
+      window.addEventListener("keydown", handleEsc);
     }
-  }, [contact?.messages]);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [showSearch]);
+
+  const closeSearch = () => {
+    setShowSearch(false);
+    setSearchText("");
+  };
 
   if (!contact) return null;
+
+  const filteredMessages = contact.messages.filter(msg =>
+    msg.text.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <div className="chat-window">
@@ -42,17 +72,35 @@ function ChatWindow({ id, goBack }) {
         <span className="chat-title">{contact.name}</span>
 
         <div className="chat-icons">
-          <i className="bi bi-search"></i>
+          <i
+            className="bi bi-search"
+            onClick={() => setShowSearch(true)}
+          ></i>
           <i className="bi bi-three-dots-vertical"></i>
         </div>
       </div>
 
+      {showSearch && (
+        <div className="chat-search">
+          <input
+            type="text"
+            placeholder="Buscar en el chat..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            autoFocus
+          />
+          <span className="cancel-search" onClick={closeSearch}>
+            Cancelar
+          </span>
+        </div>
+      )}
+
       <div className="messages">
-        {contact.messages.map(msg => (
+        {(showSearch ? filteredMessages : contact.messages).map(msg => (
           <Message key={msg.id} message={msg} />
         ))}
 
-        {typing && (
+        {typing && !showSearch && (
           <div className="message received typing">
             <i>Escribiendo...</i>
           </div>

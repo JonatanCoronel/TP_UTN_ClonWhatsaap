@@ -26,6 +26,7 @@
 
 .contact-info {
     flex: 1;
+    min-width: 0;
 }
 
 .contact-name {
@@ -40,6 +41,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
 }
 
 .contact-meta {
