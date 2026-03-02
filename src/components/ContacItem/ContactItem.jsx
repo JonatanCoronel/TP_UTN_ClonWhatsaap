@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./ContactItem.css";
 
 function ContactItem({ contact }) {
   const lastMessage =

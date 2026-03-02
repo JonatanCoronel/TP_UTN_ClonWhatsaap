@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useChat } from "../context/ChatContext";
-import ContactItem from "./ContactItem";
-import SearchBar from "./SearchBar";
+import { useChat } from "../../context/ChatContext";
+import ContactItem from "../ContacItem/ContactItem";
+import SearchBar from "../SearchBar/SearchBar";
+import "./Sidebar.css";
 
 function Sidebar() {
   const { contacts } = useChat();

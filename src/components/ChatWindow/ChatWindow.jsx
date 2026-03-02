@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useChat } from "../context/ChatContext";
-import Message from "./Message";
-import MessageInput from "./MessageInput";
+import { useChat } from "../../context/ChatContext";
+import "./ChatWindow.css";
+import Message from "../Message/Message";
+import MessageInput from "../MessageInput/MessageInput";
 
 function ChatWindow({ id, goBack }) {
   const { contacts, resetUnread } = useChat();

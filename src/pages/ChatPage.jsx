@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
-import Sidebar from "../components/Sidebar";
-import ChatWindow from "../components/ChatWindow";
+import Sidebar from "../components/Sidebar/Sidebar";
+import ChatWindow from "../components/ChatWindow/ChatWindow";
 
 function ChatPage() {
   const { id } = useParams();

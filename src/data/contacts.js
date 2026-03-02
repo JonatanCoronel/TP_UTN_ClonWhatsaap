@@ -61,7 +61,7 @@ export const contacts = [
     ],
     replies: [
       "Las minas me aman",
-      "Tengo facha",
+      "Tengo mas facha que papucho ",
       "Soy el más ganador"
     ]
   },
@@ -80,8 +80,9 @@ export const contacts = [
     ],
     replies: [
       "Hola lindo",
-      "Ay yo soy un bombón",
-      "No me hables"
+      "Ay sos un bombón",
+      "No me hables",
+      "No entiendo"
     ]
   },
 
@@ -115,12 +116,12 @@ export const contacts = [
       { id: 602, text: "Todo bien, ¿y vos?", sender: "me", time: "17:21", read: true },
       { id: 603, text: "¿Qué querés nene? Estoy trabajando", sender: "them", time: "17:22" },
       { id: 604, text: "Solo quería saber dónde está Dardo", sender: "me", time: "17:23", read: true },
-      { id: 605, text: "Debe estar gateando, seguro!!", sender: "them", time: "17:24" }
+      { id: 605, text: "Debe estar pepe, seguro!!", sender: "them", time: "17:24" }
     ],
     replies: [
-      "Siempre fuiste un inútil",
+      "hajaa haajaaa hajaaaa",
       "No puedo creerlo Pepe",
-      "Eso te pasa por rata",
+      "Cuidado con los Argentos",
       "Ay Dios mío..."
     ]
   }

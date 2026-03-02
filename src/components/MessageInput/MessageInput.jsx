@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
-import { useChat } from "../context/ChatContext";
+import { useChat } from "../../context/ChatContext";
+import "./MessageInput.css";
 
 function MessageInput({ contactId }) {
     const { sendMessage, autoReply } = useChat();

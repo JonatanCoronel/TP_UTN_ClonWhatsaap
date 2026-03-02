@@ -1,0 +1,15 @@
+
+.search-bar {
+    padding-bottom: 12px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: #202c33;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}

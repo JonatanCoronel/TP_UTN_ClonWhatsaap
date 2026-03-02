@@ -6,6 +6,7 @@ import { ChatProvider } from "./context/ChatContext";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./styles/app.css";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>

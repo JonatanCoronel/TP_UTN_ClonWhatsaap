@@ -1,3 +1,5 @@
+import "./Message.css";
+
 function Message({ message }) {
   const isMe = message.sender === "me";
 
