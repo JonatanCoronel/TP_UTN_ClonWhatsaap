@@ -25,31 +25,33 @@ function MessageInput({ contactId }) {
 
     return (
         <div className="message-input">
-            <div className="input-bubble">
+            <div className="input-wrapper">
+                <div className="input-bubble">
 
-                <textarea
-                    ref={inputRef}
-                    rows="1"
-                    placeholder="Escribí un mensaje"
-                    value={text}
-                    onChange={handleChange}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter" && !e.shiftKey) {
-                            e.preventDefault();
-                            handleSend();
-                        }
-                    }}
-                />
+                    <textarea
+                        ref={inputRef}
+                        rows="1"
+                        placeholder="Escribí un mensaje"
+                        value={text}
+                        onChange={handleChange}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" && !e.shiftKey) {
+                                e.preventDefault();
+                                handleSend();
+                            }
+                        }}
+                    />
 
-                {text.trim() ? (
-                    <i
-                        className="bi bi-arrow-right-circle-fill send-icon active"
-                        onClick={handleSend}
-                    ></i>
-                ) : (
-                    <i className="bi bi-mic-fill mic-icon"></i>
-                )}
+                    {text.trim() ? (
+                        <i
+                            className="bi bi-arrow-right-circle-fill send-icon active"
+                            onClick={handleSend}
+                        ></i>
+                    ) : (
+                        <i className="bi bi-mic-fill mic-icon"></i>
+                    )}
 
+                </div>
             </div>
         </div>
     );

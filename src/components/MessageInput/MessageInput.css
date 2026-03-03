@@ -1,11 +1,19 @@
 .message-input {
-    padding: 8px 12px;
+    padding: 10px 12px 14px;
     background: transparent;
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
     flex-shrink: 0;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 720px;
 }
 
 .input-bubble {
