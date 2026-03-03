@@ -5,7 +5,8 @@
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-html, body {
+html,
+body {
     background-color: #111b21;
     color: #e9edef;
     height: 100%;
@@ -34,7 +35,7 @@ html, body {
         padding: 0 10px;
     }
 
-        .chat-window {
+    .chat-window {
         position: fixed;
         inset: 0;
         z-index: 10;
@@ -84,7 +85,7 @@ html, body {
         padding: 6px 10px;
     }
 
-        .message-input {
+    .message-input {
         padding: 8px 10px;
         overflow: hidden;
     }
